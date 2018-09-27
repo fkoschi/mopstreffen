@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { routerConfig } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -10,23 +11,41 @@ import { environment } from '../environments/environment';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { UiModule } from './ui/ui.module';
 import { LayoutComponent } from './ui/layout/layout.component';
-
-const routes: Routes = [
-  { path: '', component: LayoutComponent, pathMatch: 'full' }
-];
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {
+  MatGridListModule,
+  MatCardModule,
+  MatMenuModule,
+  MatIconModule,
+  MatButtonModule,
+  MatToolbarModule,
+  MatSidenavModule,
+  MatListModule
+} from '@angular/material';
+import { LayoutModule } from '@angular/cdk/layout';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, DashboardComponent, NavbarComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     UiModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routerConfig),
+    BrowserAnimationsModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -10,15 +10,11 @@ import { filter, map } from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  
   items: Observable<any[]>;
 
   constructor(db: AngularFirestore) {
     this.items = db.collection('users').valueChanges();
-  } 
-  
-  ngOnInit() {
-    
   }
 
+  ngOnInit() {}
 }
