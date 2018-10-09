@@ -1,0 +1,22 @@
+.col-logo {
+  text-align: center;
+}
+
+.col-profile {
+  text-align: right;
+}
+
+.img-logo {
+  max-width: 300px;
+}
+
+.about-me {
+  padding: 20px;
+  /* background: url('../assets/background/canvas2.jpg') no-repeat top left; */
+  /* background-size: 100% 140%; */
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: #796A5A !important;
+}

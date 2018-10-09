@@ -1,9 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { routerConfig } from './app.routing';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { RouterModule } from "@angular/router";
+import { routerConfig } from "./app.routing";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
 import { HttpClientModule } from '@angular/common/http';
 
 import { AngularFireModule } from '@angular/fire';
@@ -21,13 +21,28 @@ import {
   MatButtonModule,
   MatToolbarModule,
   MatSidenavModule,
-  MatListModule
+  MatListModule,
+  MatTabsModule,
+  MatInputModule
 } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavbarComponent } from './navbar/navbar.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { MasonryGalleryModule } from 'ngx-masonry-gallery';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, NavbarComponent],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    NavbarComponent,
+    GalleryComponent,
+    HomeComponent,
+    ContactComponent
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -39,6 +54,11 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatCardModule,
     MatMenuModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatTabsModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MasonryGalleryModule,
     MatButtonModule,
     LayoutModule,
     MatToolbarModule,

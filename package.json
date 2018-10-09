@@ -28,6 +28,7 @@
     "core-js": "^2.5.4",
     "firebase": "^5.5.1",
     "font-awesome": "^4.7.0",
+    "ngx-masonry-gallery": "^1.1.10",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },

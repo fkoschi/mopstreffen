@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <h2>Kontakt</h2>
+      <mat-list role="list">
+        <mat-list-item role="listitem" class="font-weight-light">Sie haben Fragen?</mat-list-item>
+        <mat-list-item role="listitem" class="font-weight-light">Möchten uns unterstützen?</mat-list-item>
+        <mat-list-item role="listitem" class="font-weight-light">Interesse an einem Verkaufsstand vor Ort?</mat-list-item>
+      </mat-list>
+      <br>     
+      <p class="font-weight-normal">Dann melden Sie sich gerne! </p>
+      <!--<p><a href="mailto:mopstreffen-ladenburg@gmx.de">per <i class="fa fa-envelope"></i></a> oder <i class="fa fa-arrow-right"></i></p>-->
+      
+    </div>
+    <div class="col-md-6">
+      <mat-form-field>
+        <input matInput placeholder="Vorname">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Nachname">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="E-Mail Adresse" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea matInput placeholder="Deine Nachricht an uns" name="message" id="message" rows="5"></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button>Abschicken</button>
+
+    </div>
+  </div>
+</div>
