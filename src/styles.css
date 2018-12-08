@@ -10,11 +10,15 @@ body {
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
+
+p {}
 
 a {
   color: #796A5A;
 }
+
 a:hover {
   color: #ED74B2;
 }

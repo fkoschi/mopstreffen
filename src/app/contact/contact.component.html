@@ -1,3 +1,6 @@
+<agm-map #gmaps style="width: 100%; height: 400px;" [latitude]="lat" [longitude]="long" [style]="style">
+  <agm-marker [latitude]="lat" [longitude]="long"></agm-marker>
+</agm-map>
 <div class="container mt-5">
   <div class="row">
     <div class="col">
@@ -7,10 +10,10 @@
         <mat-list-item role="listitem" class="font-weight-light">Möchten uns unterstützen?</mat-list-item>
         <mat-list-item role="listitem" class="font-weight-light">Interesse an einem Verkaufsstand vor Ort?</mat-list-item>
       </mat-list>
-      <br>     
+      <br>
       <p class="font-weight-normal">Dann melden Sie sich gerne! </p>
       <!--<p><a href="mailto:mopstreffen-ladenburg@gmx.de">per <i class="fa fa-envelope"></i></a> oder <i class="fa fa-arrow-right"></i></p>-->
-      
+
     </div>
     <div class="col-md-6">
       <mat-form-field>

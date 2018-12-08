@@ -1,0 +1,17 @@
+.about-me {
+  padding: 20px;
+  /* background: url('../../assets/background/don.jpg') no-repeat top left;  */
+  /* background-size: 100% 140%; */
+}
+.profile-images {
+    text-align: center;
+}
+img.profile {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  margin: 20px;
+}
+img.left {
+    margin-right: -30px;
+}

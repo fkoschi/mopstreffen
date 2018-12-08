@@ -12,6 +12,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { UiModule } from './ui/ui.module';
 import { LayoutComponent } from './ui/layout/layout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AgmCoreModule } from '@agm/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {
   MatGridListModule,
@@ -33,6 +34,11 @@ import { ContactComponent } from './contact/contact.component';
 import { MasonryGalleryModule } from 'ngx-masonry-gallery';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
+import { YearComponent } from './home/year/year.component';
+import { SponsorsComponent } from './home/sponsors/sponsors.component';
+import { HelpComponent } from './home/help/help.component';
+import { AboutMeComponent } from './home/about-me/about-me.component';
+import { CountUpModule } from 'countup.js-angular2';
 
 @NgModule({
   declarations: [
@@ -41,7 +47,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     GalleryComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    YearComponent,
+    SponsorsComponent,
+    HelpComponent,
+    AboutMeComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +59,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AngularFireModule.initializeApp(environment.firebase),
     UiModule,
     RouterModule.forRoot(routerConfig),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyC4-HONc6hNy5rG0EbdK6B0s2FIjUqXAUc'
+    }),
     BrowserAnimationsModule,
     MatGridListModule,
     MatCardModule,
@@ -63,7 +76,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LayoutModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    CountUpModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
