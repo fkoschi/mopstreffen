@@ -1,3 +1,5 @@
+:host { display: block; }
+agm-map { height: 400px; }
 .mat-form-field {
-    display: block;
+  display: block;
 }

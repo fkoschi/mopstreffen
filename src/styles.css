@@ -13,7 +13,12 @@ body {
   /* font-family: 'Poppins', sans-serif; */
 }
 
-p {}
+h2 {
+  color: #796A5A;
+}
+p.subnote {
+  color: #C9BBA2;
+}
 
 a {
   color: #796A5A;

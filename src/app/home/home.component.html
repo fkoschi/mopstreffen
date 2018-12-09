@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col col-logo">
       <img src="../assets/logo/logo.png" alt="logo" class="img-logo img-fluid">
@@ -23,22 +23,29 @@
 <app-about-me></app-about-me>
 <div class="container" [ngStyle]="{'margin-top': '50px'}">
   <div class="row">
-
     <div class="col-12 text-center">
-      <!-- <img class="img-fluid" src="../../assets/images/lookback.jpg" alt="look back"> -->
+      <img class="img-fluid" src="../../assets/images/lookback.jpg" alt="look back">
     </div>
   </div>
+</div>
+<div class="container-fluid home-flashback__header">
+    <div class="col-12 text-center">
+        <h2>Rückblick</h2>
+        <p class="subnote">Hier bekommt ihr einen Rückblick auf die letzten Jahre:</p>
+    </div>
+</div>
+<div class="container">
   <div class="row">
     <div class="col">
       <mat-tab-group>
         <mat-tab label="2015">
-          <app-year [year]="2015"></app-year>
+          <app-year [year]="0"></app-year>
         </mat-tab>
         <mat-tab label="2016">
-          <app-year [year]="2016"></app-year>
+          <app-year [year]="1"></app-year>
         </mat-tab>
         <mat-tab label="2017">
-          <app-year [year]="2017"></app-year>
+          <app-year [year]="2"></app-year>
         </mat-tab>
       </mat-tab-group>
     </div>
